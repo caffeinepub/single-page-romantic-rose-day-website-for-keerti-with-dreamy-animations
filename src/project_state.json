@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Single-page romantic, dreamy website dedicated to Keerti for Rose Day with pastel gradient background, animated sparkles/bokeh/petals, hero rose-offering visual, glowing romantic text, smooth animations, and optional footer message.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic illustration of a hand offering a deep red rose to a smiling girl accepting it, with gentle glow and floating petals (hero-rose-day.dim_1600x900.png)\n- Soft dreamy bokeh + sparkle overlay texture on transparent/very dark background for compositing (overlay-bokeh-sparkles.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-romantic-digital-love-letter-website-dedicated-to-keerti-with-a-dreamy-pastel-aesthetic-and-a-centered-hero-composition",
+      "title": "Build a single-page romantic “digital love letter” website dedicated to Keerti, with a dreamy pastel aesthetic and a centered hero composition.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-soft-dreamy-gradient-background-using-blush-pink-peach-cream-and-warm-golden-tones-with-subtle-animated-overlays-sparkles-glowing-dust-particles-and-light-bokeh-drifting-slowly-to-create-a-magical-atmosphere",
+      "title": "Implement a soft dreamy gradient background using blush pink, peach, cream, and warm golden tones, with subtle animated overlays (sparkles, glowing dust particles, and light bokeh) drifting slowly to create a magical atmosphere.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-center-focused-hero-section-featuring-a-romantic-illustration-visual-of-a-hand-gently-offering-a-deep-red-rose-to-a-smiling-girl-keerti-accepting-it-with-a-gentle-glow-around-the-hands-rose-and-floating-rose-petals-for-elegance",
+      "title": "Create a center-focused hero section featuring a romantic illustration/visual of a hand gently offering a deep red rose to a smiling girl (Keerti) accepting it, with a gentle glow around the hands/rose and floating rose petals for elegance.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-main-romantic-text-with-glowing-styling-a-large-cursive-headline-reading-exactly-happy-rose-day-my-love-keerti-in-rose-gold-or-soft-white-and-a-subtitle-below-reading-exactly-every-rose-reminds-me-of-you-and-every-moment-with-you-feels-magical-in-an-elegant-complementary-font",
+      "title": "Add the main romantic text with glowing styling: a large cursive headline reading exactly “Happy Rose Day, My Love Keerti 🌹” in rose-gold or soft white, and a subtitle below reading exactly “Every rose reminds me of you, and every moment with you feels magical.” in an elegant complementary font.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-additional-romantic-motion-effects-smooth-fade-in-animations-for-hero-text-on-initial-load-gentle-shimmer-glow-emphasis-around-important-text-and-soft-heart-rose-petal-animations-that-appear-or-intensify-as-the-user-scrolls",
+      "title": "Add additional romantic motion effects: smooth fade-in animations for hero/text on initial load, gentle shimmer/glow emphasis around important text, and soft heart/rose petal animations that appear or intensify as the user scrolls.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-an-optional-footer-message-at-the-bottom-of-the-page-and-default-it-to-exactly-forever-yours-styled-softly-to-match-the-theme",
+      "title": "Include an optional footer message at the bottom of the page and default it to exactly “Forever Yours ❤️”, styled softly to match the theme.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-coherent-visual-theme-system-colors-typography-spacing-and-component-styling-that-consistently-delivers-a-romantic-dreamy-elegant-pastel-look-across-the-page-avoid-blue-purple-dominant-palettes",
+      "title": "Define and apply a coherent visual theme system (colors, typography, spacing, and component styling) that consistently delivers a romantic, dreamy, elegant pastel look across the page (avoid blue/purple-dominant palettes).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-required-for-the-hero-illustration-and-optionally-subtle-texture-overlays-stored-under-frontend-public-assets-generated-and-render-them-directly-from-the-frontend-do-not-route-images-through-the-backend",
+      "title": "Add generated static image assets required for the hero illustration and (optionally) subtle texture overlays, stored under frontend/public/assets/generated, and render them directly from the frontend (do not route images through the backend).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a single-page romantic Rose Day website for Keerti with pastel gradient background, animated sparkles/bokeh/petals, centered hero visual (hand offering red rose to Keerti), glowing cursive headline + subtitle, smooth fade-in/shimmer effects, and optional footer message.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Single-page romantic Rose Day website for Keerti with dreamy animations",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

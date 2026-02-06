@@ -1,0 +1,228 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Keerti Rose Day Single-Page Love Letter (Dreamy Pastel + Animations)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a single-page vertically-stacked love-letter layout with centered hero composition and romantic dreamy aesthetic throughout.",
+      "acceptanceCriteria": [
+        "The app renders as a single-page experience (no required navigation) with one primary vertically-stacked layout: background + centered hero + headline/subtitle + footer.",
+        "Visual style is consistently romantic/dreamy/soft/pastel across all sections (no default template look)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page App shell that renders one vertically-stacked layout (background layers + centered hero + headline/subtitle + footer). Use the build-template-react + initial-app setup (Tailwind + app entry wiring) to keep structure consistent; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the root render remains single-page (no routing requirements added) and that App is mounted as the only required view for this experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement full-viewport dreamy warm pastel gradient background with smooth animated overlay layers (sparkles, dust, bokeh).",
+      "acceptanceCriteria": [
+        "Background shows a multi-stop gradient in the specified warm/pastel palette and fills the full viewport height.",
+        "At least three distinct overlay animation layers are visible (sparkles + dust + bokeh) and move slowly without distracting jitter.",
+        "Animations perform smoothly on typical laptop/mobile screens (no obvious stutter) and do not block scrolling/interactions."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define the global romantic gradient background styles and reusable animation utilities (slow drift for dust/bokeh, subtle twinkle for sparkles). Include accessibility via prefers-reduced-motion and ensure overlays do not intercept pointer events."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens to support the warm blush/peach/cream/gold palette and add named keyframes/animations for slow drift, bokeh float, and sparkle twinkle, used across the single-page layout."
+        },
+        {
+          "path": "frontend/src/features/rose-day/DreamyOverlays.tsx",
+          "operation": "create",
+          "description": "Create a lightweight overlay-layer component that renders three distinct visual layers (sparkles, dust particles, bokeh) using CSS/Tailwind animations and the generated overlay texture; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire DreamyOverlays into the single-page layout behind the hero/text content and ensure it covers the full viewport without blocking interactions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build a centered hero visual using the generated illustration, add gentle glow around the rose/hands area, and animate floating rose petals.",
+      "acceptanceCriteria": [
+        "Hero visual is prominently centered and clearly depicts the described rose-offering moment (hand offering deep red rose; Keerti accepting; warm smile).",
+        "A subtle glow effect is visible around the hands/rose area.",
+        "Floating rose petals are visible in/around the hero area and animate gently (slow drift)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/rose-day/HeroRoseIllustration.tsx",
+          "operation": "create",
+          "description": "Create the centered hero visual component that displays the generated illustration and applies a soft glow effect around the focal area (hands/rose), plus layered floating petals in the hero region; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/rose-day/PetalsLayer.tsx",
+          "operation": "create",
+          "description": "Add a dedicated petals animation layer (slow drifting petals) optimized for smooth performance (CSS transforms/opacity) and safe for interaction (pointer-events none); verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Place HeroRoseIllustration in the centered hero composition and ensure petals render in/around the hero without obscuring text readability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add exact headline/subtitle text with romantic typography, glow styling, and readable contrast on all screen sizes.",
+      "acceptanceCriteria": [
+        "Headline text matches exactly (including emoji) and is displayed in a cursive/handwritten-style font with a soft glow.",
+        "Subtitle text matches exactly and uses a readable elegant font distinct from the headline.",
+        "Text contrast remains readable against the animated background on desktop and mobile sizes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Load the two-font pairing (handwritten/cursive for headline + elegant serif/sans for subtitle/footer) using a safe webfont approach (e.g., hosted font links) and set appropriate preconnect/performance hints."
+        },
+        {
+          "path": "frontend/src/features/rose-day/RomanticCopy.tsx",
+          "operation": "create",
+          "description": "Create a text block component rendering the exact headline “Happy Rose Day, My Love Keerti 🌹” and exact subtitle “Every rose reminds me of you, and every moment with you feels magical.” with glow styling and responsive typography; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global typography variables/classes for headline/subtitle fonts plus soft-glow text utilities and readable contrast treatment over animated backgrounds."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire RomanticCopy into the centered hero stack directly beneath the hero visual and ensure layout remains vertically stacked and centered across breakpoints."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add tasteful motion: initial load fade-in for hero/text, shimmer/pulsing glow on headline, and scroll-reactive hearts/petals intensification.",
+      "acceptanceCriteria": [
+        "On page load, hero and text fade/slide in smoothly (no abrupt pop-in).",
+        "Headline has a subtle shimmer or pulsing glow effect that remains tasteful and not overly bright.",
+        "When scrolling, additional heart/petal elements animate in a noticeable but soft way (e.g., more petals drift, or hearts appear briefly)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/rose-day/useScrollIntensity.ts",
+          "operation": "create",
+          "description": "Implement a small hook that tracks scroll progress/intensity (with throttling via requestAnimationFrame) to drive gentle increases in decorative animation density without impacting performance."
+        },
+        {
+          "path": "frontend/src/features/rose-day/ScrollHeartsLayer.tsx",
+          "operation": "create",
+          "description": "Create a lightweight scroll-reactive hearts (and/or extra petals) layer that becomes more visible or spawns brief elements as the user scrolls, respecting prefers-reduced-motion; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add keyframes/classes for fade-in on load, subtle shimmer/pulsing glow for headline emphasis, and slow drift animations; ensure animations are transform/opacity-based for smoothness."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Add/adjust named animations (fade-in-up, soft-shimmer, glow-pulse, float-slow) to be used by hero/text and scroll-reactive layers."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the initial load animations to hero/text and attach scroll-intensified decorative layers (ScrollHeartsLayer / PetalsLayer) so effects increase subtly as the user scrolls."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add the bottom footer message with exact default text and soft romantic styling.",
+      "acceptanceCriteria": [
+        "A footer line appears at the bottom of the page reading exactly “Forever Yours ❤️”.",
+        "Footer styling is subtle and consistent with the romantic theme (smaller size, gentle glow or soft color)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/rose-day/FooterMessage.tsx",
+          "operation": "create",
+          "description": "Create a footer component that renders exactly “Forever Yours ❤️” with subtle glow/soft color and spacing that sits at the bottom of the single-page layout; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Place FooterMessage at the bottom of the vertically-stacked page layout with consistent spacing and responsive alignment."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Define and apply a coherent romantic theme system (warm palette, typography pairing, spacing) consistently across the page (avoid blue/purple dominance).",
+      "acceptanceCriteria": [
+        "A consistent palette using blush/peach/cream/warm gold is applied to background, text accents, and decorative elements.",
+        "Typography pairing feels handwritten + elegant, and is applied consistently (headline vs subtitle vs footer).",
+        "No section uses an unrelated default theme; overall presentation looks intentionally designed for the romantic love-letter mood."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define theme CSS variables for blush/peach/cream/warm-gold accents, text colors, glow strengths, and spacing rhythm, and apply them globally so the page avoids a default template appearance."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Map the romantic theme variables into Tailwind color tokens and extend with theme-friendly shadows/glows to keep styling consistent across components."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently at the page root (background, base text, spacing, and decorative layers) so all sections share the same romantic pastel system."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add and reference generated static images under frontend/public/assets/generated for the hero illustration and overlay texture, served directly by the frontend.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the page via static paths.",
+        "Hero uses the generated hero illustration image as its main visual.",
+        "No backend endpoints are used for serving these images."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-rose-day.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero illustration image asset at this exact path for direct static rendering by the frontend."
+        },
+        {
+          "path": "frontend/public/assets/generated/overlay-bokeh-sparkles.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated overlay texture image asset at this exact path for compositing into dreamy overlay layers."
+        },
+        {
+          "path": "frontend/src/features/rose-day/HeroRoseIllustration.tsx",
+          "operation": "modify",
+          "description": "Reference and render the static hero image from frontend/public/assets/generated/hero-rose-day.dim_1600x900.png as the primary hero visual (no backend image serving)."
+        },
+        {
+          "path": "frontend/src/features/rose-day/DreamyOverlays.tsx",
+          "operation": "modify",
+          "description": "Reference and composite the static overlay texture from frontend/public/assets/generated/overlay-bokeh-sparkles.dim_1920x1080.png into the animated bokeh/sparkle layers (no backend image serving)."
+        }
+      ]
+    }
+  ]
+}

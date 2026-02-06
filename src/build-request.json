@@ -1,0 +1,177 @@
+{
+  "kind": "build_request",
+  "title": "Single-page romantic Rose Day website for Keerti with dreamy animations",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Build a single-page romantic “digital love letter” website dedicated to Keerti, with a dreamy pastel aesthetic and a centered hero composition.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create a single-page romantic website dedicated to my girlfriend."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app renders as a single-page experience (no required navigation) with one primary vertically-stacked layout: background + centered hero + headline/subtitle + footer.",
+        "Visual style is consistently romantic/dreamy/soft/pastel across all sections (no default template look)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a soft dreamy gradient background using blush pink, peach, cream, and warm golden tones, with subtle animated overlays (sparkles, glowing dust particles, and light bokeh) drifting slowly to create a magical atmosphere.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "A soft dreamy gradient background using blush pink, peach, cream, and warm golden tones. Subtle animated sparkles, glowing dust particles, and light bokeh effects floating slowly across the page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background shows a multi-stop gradient in the specified warm/pastel palette and fills the full viewport height.",
+        "At least three distinct overlay animation layers are visible (sparkles + dust + bokeh) and move slowly without distracting jitter.",
+        "Animations perform smoothly on typical laptop/mobile screens (no obvious stutter) and do not block scrolling/interactions."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a center-focused hero section featuring a romantic illustration/visual of a hand gently offering a deep red rose to a smiling girl (Keerti) accepting it, with a gentle glow around the hands/rose and floating rose petals for elegance.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "A beautiful romantic illustration or visual showing a hand gently offering a deep red rose. A girl named Keerti is smiling warmly as she accepts the rose. ... Gentle glow around the hands and rose. Floating rose petals add elegance."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero visual is prominently centered and clearly depicts the described rose-offering moment (hand offering deep red rose; Keerti accepting; warm smile).",
+        "A subtle glow effect is visible around the hands/rose area.",
+        "Floating rose petals are visible in/around the hero area and animate gently (slow drift)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add the main romantic text with glowing styling: a large cursive headline reading exactly “Happy Rose Day, My Love Keerti 🌹” in rose-gold or soft white, and a subtitle below reading exactly “Every rose reminds me of you, and every moment with you feels magical.” in an elegant complementary font.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Large glowing cursive romantic font in rose-gold or soft white:\n“Happy Rose Day, My Love Keerti 🌹”\n\nBelow it, a soft romantic subtitle in an elegant font:\n“Every rose reminds me of you, and every moment with you feels magical.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Headline text matches exactly (including emoji) and is displayed in a cursive/handwritten-style font with a soft glow.",
+        "Subtitle text matches exactly and uses a readable elegant font distinct from the headline.",
+        "Text contrast remains readable against the animated background on desktop and mobile sizes."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add additional romantic motion effects: smooth fade-in animations for hero/text on initial load, gentle shimmer/glow emphasis around important text, and soft heart/rose petal animations that appear or intensify as the user scrolls.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Soft heart or rose petal animations on scroll",
+          "Gentle glow or shimmer effect around important text",
+          "Smooth fade-in animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On page load, hero and text fade/slide in smoothly (no abrupt pop-in).",
+        "Headline has a subtle shimmer or pulsing glow effect that remains tasteful and not overly bright.",
+        "When scrolling, additional heart/petal elements animate in a noticeable but soft way (e.g., more petals drift, or hearts appear briefly)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Include an optional footer message at the bottom of the page and default it to exactly “Forever Yours ❤️”, styled softly to match the theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Optional Footer Message:\nA small emotional line at the bottom:\n“Forever Yours ❤️”\nor\n“With all my love, always.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A footer line appears at the bottom of the page reading exactly “Forever Yours ❤️”.",
+        "Footer styling is subtle and consistent with the romantic theme (smaller size, gentle glow or soft color)."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Define and apply a coherent visual theme system (colors, typography, spacing, and component styling) that consistently delivers a romantic, dreamy, elegant pastel look across the page (avoid blue/purple-dominant palettes).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Romantic, dreamy, emotional, magical, elegant, soft, pastel love aesthetic."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent palette using blush/peach/cream/warm gold is applied to background, text accents, and decorative elements.",
+        "Typography pairing feels handwritten + elegant, and is applied consistently (headline vs subtitle vs footer).",
+        "No section uses an unrelated default theme; overall presentation looks intentionally designed for the romantic love-letter mood."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add generated static image assets required for the hero illustration and (optionally) subtle texture overlays, stored under frontend/public/assets/generated, and render them directly from the frontend (do not route images through the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "A beautiful romantic illustration or visual..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the page via static paths.",
+        "Hero uses the generated hero illustration image as its main visual.",
+        "No backend endpoints are used for serving these images."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must not modify files under frontend/src/components/ui or other immutable paths listed by the system.",
+    "Backend must remain single-actor architecture; only add backend work if strictly necessary for this single-page site."
+  ],
+  "nonGoals": [
+    "User accounts, Internet Identity login flows, or personalization beyond the hardcoded Keerti/Rose Day content.",
+    "Multi-page routing, admin panels, or content management.",
+    "External integrations (social APIs, email, real-time chat)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic illustration of a hand offering a deep red rose to a smiling girl accepting it, with gentle glow and floating petals (hero-rose-day.dim_1600x900.png)",
+      "Soft dreamy bokeh + sparkle overlay texture on transparent/very dark background for compositing (overlay-bokeh-sparkles.dim_1920x1080.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

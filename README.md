@@ -1,2 +1,3 @@
-# single-page-romantic-rose-day-website-for-keerti-with-dreamy-animations
-Exported from Caffeine project: Single-page romantic Rose Day website for Keerti with dreamy animations
+## Single-page romantic Rose Day website for Keerti with dreamy animations
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

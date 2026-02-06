@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor definition.",
+  "feature_evidence.json": "Feature evidence report mapping romance‑themed UI features to source files and components.",
+  "frontend-file-summaries.txt": "Text file containing prewritten summaries for various frontend components.",
+  "frontend/index.css": "Global Tailwind-based CSS defining theme variables, dark mode, and base styling.",
+  "frontend/index.html": "HTML entry point loading fonts and mounting the React app.",
+  "frontend/src/App.tsx": "Main React component assembling overlays, hero illustration, romantic text, hearts, and footer.",
+  "frontend/src/features/rose-day/DreamyOverlays.tsx": "Generates animated sparkles, dust, and bokeh particles plus a static overlay texture.",
+  "frontend/src/features/rose-day/FooterMessage.tsx": "Renders a glowing footer message reading “Forever Yours ❤️.”",
+  "frontend/src/features/rose-day/HeroRoseIllustration.tsx": "Shows the hero rose illustration with glow effects and floating petals.",
+  "frontend/src/features/rose-day/PetalsLayer.tsx": "Creates animated falling rose-petal SVG elements with randomized motion.",
+  "frontend/src/features/rose-day/RomanticCopy.tsx": "Displays shimmering headline and subtitle romantic text.",
+  "frontend/src/features/rose-day/ScrollHeartsLayer.tsx": "Renders floating hearts whose quantity and opacity scale with scroll intensity.",
+  "frontend/src/features/rose-day/useScrollIntensity.ts": "Hook computing normalized scroll progress using requestAnimationFrame.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and refreshing a backend actor based on authentication state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity authentication, including loading stored identities and handling login states. Wraps AuthClient creation and exposes login, clear, and status helpers.",
+  "frontend/src/index.css": "Defines Tailwind base layers with custom romantic-themed colors, fonts, gradients, and typography utilities. Adds animation and style utilities for the site's dreamy aesthetic.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the InternetIdentityProvider. Imports global styles and renders the root App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, radii, shadows, and animations using CSS variables. Includes typography, container queries, and animation plugins.",
+  "project_state.json": "Project metadata describing the romantic single‑page site, required assets, existing features, and design requirements. Tracks versioning, summaries, and architectural notes."
+}

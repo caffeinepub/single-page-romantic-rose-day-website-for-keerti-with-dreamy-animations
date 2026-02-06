@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main single-page application component that orchestrates the romantic Rose Day layout with dreamy overlays, hero illustration, romantic text, scroll-reactive hearts, and footer message.",
+  "frontend/src/features/rose-day/DreamyOverlays.tsx": "Renders three animated overlay layers (bokeh, dust particles, and sparkles) with randomized positions and durations, plus the static overlay texture from generated assets.",
+  "frontend/src/features/rose-day/HeroRoseIllustration.tsx": "Displays the hero illustration with animated glow effects around the image and the hands/rose area, plus floating rose petals.",
+  "frontend/src/features/rose-day/PetalsLayer.tsx": "Generates and animates falling rose petals using SVG graphics with gradient fills and randomized positions, rotations, and timing.",
+  "frontend/src/features/rose-day/RomanticCopy.tsx": "Renders the main headline \"Happy Rose Day, My Love Keerti 🌹\" with shimmer animation and the romantic subtitle text.",
+  "frontend/src/features/rose-day/ScrollHeartsLayer.tsx": "Creates scroll-reactive floating hearts that increase in quantity and opacity as the user scrolls down the page.",
+  "frontend/src/features/rose-day/useScrollIntensity.ts": "Custom hook that tracks scroll progress and returns a normalized intensity value (0-1) using requestAnimationFrame for smooth performance.",
+  "frontend/src/features/rose-day/FooterMessage.tsx": "Displays the footer message \"Forever Yours ❤️\" with romantic styling and subtle glow effect.",
+  "frontend/src/index.css": "Global styles defining the romantic color palette (blush pink, peach, cream, warm gold), custom typography with Great Vibes and Cormorant Garamond fonts, gradient background, and all animation keyframes for particles, text effects, and motion.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic theme colors mapped to OKLCH values and custom box shadows for sparkle effects.",
+  "frontend/index.html": "HTML entry point with updated title and preconnect links for Google Fonts (Great Vibes and Cormorant Garamond)."
+}

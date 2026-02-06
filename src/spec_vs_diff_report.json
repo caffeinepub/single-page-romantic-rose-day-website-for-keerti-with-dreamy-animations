@@ -1,0 +1,57 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T19:48:03.748Z",
+  "summary": "Diff adds a single-page Rose Day UI with centered hero image, romantic copy, animated gradient background overlays (bokeh/dust/sparkles), floating petals and scroll-reactive hearts, plus a footer message. However, the required generated image assets are not present in the diff, and unrelated Internet Identity/auth/actor plumbing is introduced despite being a non-goal.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Add generated static image assets under frontend/public/assets/generated (hero illustration and overlay texture) and render them via static paths (no backend endpoints).",
+      "reason": "The UI references the two required PNGs via /assets/generated/... but the diff does not add any files under frontend/public/assets/generated, so the required generated assets themselves are not implemented in the change set.",
+      "evidence": [
+        "frontend/src/features/rose-day/HeroRoseIllustration.tsx",
+        "frontend/src/features/rose-day/DreamyOverlays.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication/provider and identity-aware backend actor hook (login/clear/status) introduced.",
+      "reason": "BuildRequest explicitly lists Internet Identity login flows as a non-goal for this single-page hardcoded site; no auth is required to meet any REQ-1..REQ-8 acceptance criteria.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Backend canister scaffold added (empty actor).",
+      "reason": "Backend work was to be added only if strictly necessary for a static single-page site; requirements specify images must be served statically from the frontend and no backend endpoints are needed.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/features/rose-day/DreamyOverlays.tsx",
+    "frontend/src/features/rose-day/FooterMessage.tsx",
+    "frontend/src/features/rose-day/HeroRoseIllustration.tsx",
+    "frontend/src/features/rose-day/PetalsLayer.tsx",
+    "frontend/src/features/rose-day/RomanticCopy.tsx",
+    "frontend/src/features/rose-day/ScrollHeartsLayer.tsx",
+    "frontend/src/features/rose-day/useScrollIntensity.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
